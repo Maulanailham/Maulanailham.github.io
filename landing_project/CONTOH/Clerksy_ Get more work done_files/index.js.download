@@ -1,0 +1,11 @@
+function loadSite() {
+  document.body.className = "loaded"
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var img = new Image()
+  img.src = "./assets/background-img.jpg"
+  img.onload = loadSite
+  img.onerror = loadSite
+  setTimeout(loadSite, 1000)
+})
